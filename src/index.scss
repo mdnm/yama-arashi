@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $red-500
+  )
+);
+$box-shadow: 0 .5rem 12px rgba(0, 0, 0, .12);
+
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/utilities";
+
+$navbar-light-hover-color: $red-600;
+$navbar-light-active-color: $red-600;
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      values: (
+        100-navbar: calc(100vh - 120px), 
+      )
+    ),
+    "fs": (
+      property: font-size,
+      class: fs,
+      values: (
+        hero: 48px
+      )
+    ),
+  )
+);
+
+body {
+  overflow-x: hidden;
+}
+
+@import "~bootstrap/scss/utilities/api";
+@import "~bootstrap/scss/bootstrap";
